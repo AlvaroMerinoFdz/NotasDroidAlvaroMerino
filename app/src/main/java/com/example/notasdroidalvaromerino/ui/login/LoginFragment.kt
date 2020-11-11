@@ -37,7 +37,7 @@ class LoginFragment : Fragment() {
 
         val usernameEditText = view.findViewById<EditText>(R.id.txtUsuario)
         val passwordEditText = view.findViewById<EditText>(R.id.password)
-        val loginButton = view.findViewById<Button>(R.id.login)
+        val loginButton = view.findViewById<Button>(R.id.btnIniciarSesion)
         val loadingProgressBar = view.findViewById<ProgressBar>(R.id.loading)
 
         loginViewModel.loginFormState.observe(this,
