@@ -10,4 +10,5 @@
     <string name="invalid_password">La contraseña debe tener más de 5 caracteres</string>
     <string name="login_failed">"Fallo al iniciar sesion"</string>
     <string name="BtnRegistrar">"Registrar"</string>
+    <string name="BtnImagen">"Cargar Imagen"</string>
 </resources>

@@ -36,7 +36,7 @@ class LoginFragment : Fragment() {
             .get(LoginViewModel::class.java)
 
         val usernameEditText = view.findViewById<EditText>(R.id.txtUsuario)
-        val passwordEditText = view.findViewById<EditText>(R.id.password)
+        val passwordEditText = view.findViewById<EditText>(R.id.txtContraseña)
         val loginButton = view.findViewById<Button>(R.id.btnIniciarSesion)
         val loadingProgressBar = view.findViewById<ProgressBar>(R.id.loading)
 
@@ -101,6 +101,7 @@ class LoginFragment : Fragment() {
                 passwordEditText.text.toString()
             )
         }
+
     }
 
     private fun updateUiWithUser(model: LoggedInUserView) {

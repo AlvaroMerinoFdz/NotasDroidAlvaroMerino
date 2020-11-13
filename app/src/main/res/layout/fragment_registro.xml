@@ -13,25 +13,24 @@
         tools:context=".ui.login.registro">
 
     <EditText
-            android:id="@+id/username"
+            android:id="@+id/txtUsuario"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="96dp"
+            android:layout_marginTop="32dp"
             android:layout_marginEnd="24dp"
             android:hint="@string/prompt_email"
             android:inputType="textEmailAddress"
             android:selectAllOnFocus="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.281"/>
 
     <EditText
-            android:id="@+id/password"
+            android:id="@+id/txtContraseña"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="24dp"
             android:hint="@string/prompt_password"
             android:imeActionLabel="@string/action_sign_in_short"
@@ -40,25 +39,21 @@
             android:selectAllOnFocus="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/username"/>
-
+            tools:layout_editor_absoluteY="136dp" app:layout_constraintHorizontal_bias="0.187"/>
     <Button
-            android:id="@+id/login"
+            android:id="@+id/btnRegistro"
             android:enabled="false"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:layout_marginStart="48dp"
-            android:layout_marginTop="16dp"
             android:layout_marginEnd="48dp"
-            android:layout_marginBottom="64dp"
-            android:text="@string/action_sign_in"
+            android:layout_marginBottom="16dp"
+            android:text="@string/BtnRegistrar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password"
-            app:layout_constraintVertical_bias="0.2"/>
-
+            app:layout_constraintHorizontal_bias="0.493"/>
     <ProgressBar
             android:id="@+id/loading"
             android:visibility="gone"
@@ -70,8 +65,32 @@
             android:layout_marginEnd="32dp"
             android:layout_marginBottom="64dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/password"
-            app:layout_constraintStart_toStartOf="@+id/password"
+            app:layout_constraintEnd_toEndOf="@+id/txtContraseña"
+            app:layout_constraintStart_toStartOf="@+id/txtContraseña"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.3"/>
+    <EditText
+            android:layout_width="327dp"
+            android:layout_height="38dp"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/txtEmail"
+            app:layout_constraintTop_toBottomOf="@+id/txtUsuario"
+            app:layout_constraintBottom_toTopOf="@+id/txtContraseña" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.476"
+            android:hint="E-Mail" app:layout_constraintVertical_bias="0.162"/>
+    <ImageView
+            android:src="@drawable/ic_launcher_foreground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/imageView"
+            app:layout_constraintTop_toBottomOf="@+id/txtContraseña"
+            android:layout_marginTop="52dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+            android:text="@string/BtnImagen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/BtnImagen"
+            app:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:layout_marginTop="40dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
