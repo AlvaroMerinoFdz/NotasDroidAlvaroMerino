@@ -18,7 +18,7 @@ import android.widget.Toast
 
 import com.example.notasdroidalvaromerino.R
 
-class LoginFragment : Fragment() {
+class registro : Fragment() {
 
     private lateinit var loginViewModel: LoginViewModel
 
@@ -27,7 +27,7 @@ class LoginFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        return inflater.inflate(R.layout.fragment_registro, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -37,7 +37,7 @@ class LoginFragment : Fragment() {
 
         val usernameEditText = view.findViewById<EditText>(R.id.txtUsuario)
         val passwordEditText = view.findViewById<EditText>(R.id.txtContraseña)
-        val loginButton = view.findViewById<Button>(R.id.btnIniciarSesion)
+        val loginButton = view.findViewById<Button>(R.id.btnRegistro)
         val loadingProgressBar = view.findViewById<ProgressBar>(R.id.loading)
 
         loginViewModel.loginFormState.observe(this,
@@ -101,7 +101,6 @@ class LoginFragment : Fragment() {
                 passwordEditText.text.toString()
             )
         }
-
     }
 
     private fun updateUiWithUser(model: LoggedInUserView) {
